@@ -1,0 +1,22 @@
+- hosts:
+  user: ops
+  become: yes
+  vars:
+    apache_version: 2.6
+    motd_warning: "WARNING: used by ICT faculty/students only.\n"
+    testserver: yes
+  tasks:
+    - name: install apache
+      action: apt name=httpd state=installed
+    
+    - name: restart apache
+      service: 
+        name: httpd
+        state: restarted
+  tasks:
+    - name: install EPEL
+      action: apt name=EPEL state=installed
+  tasks:
+    - name: remove tree
+      action: apt name=tree state=removed
+

@@ -1,0 +1,24 @@
+
+--------------------------------------------------
+4-rnobakht28
+--------------------------------------------------
+Python Version: 3.12.4 (main, Jun  7 2024, 06:33:07) [GCC 14.1.1 20240522]
+Ran on 2024-07-30 08:27:14.601029
+Git commit used: commit 63851a4c47b3a01f1738ae66be4af05435061676
+Author: Eric Brauer <eric.brauer@senecacollege.ca>
+Date:   Sat Jul 27 13:10:09 2024 -0400
+
+    Feedback added in result.txt
+
+
+--------------------------------------------------
+Attribute added to class                   2.0/  2
+implement in_stock flag                    0.0/  2
+uses dunder to implement operator          2.0/  2
+uses dunder to implement repr              2.0/  2
+uses dunder to implement str()             1.0/  2
+
+--------------------------------------------------
+Total: 7.0/10
+FEEDBACK:
+To implement in_stock, create a new attribute and check inside sub
