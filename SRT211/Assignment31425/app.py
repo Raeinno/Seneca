@@ -31,6 +31,7 @@ app.debug = True
 mysql1 = MySQLdb.connect("localhost","root","13822831","library")
 mysql = mysql1.cursor()
 
+
 @app.route('/') #Main page.
 def main_page():
     return render_template('index.html')
@@ -53,9 +54,15 @@ def add_book():
     return redirect('/')
     
 @app.route('/view_books', methods = ['POST','GET'])
+#View the table
 def view_book():
-    book =  mysql.execute("select * from books;")
-    return render_template('view_book.html',books1=book) 
+    
+
+    book = mysql.execute("select * from books;")
+    if book > 0:
+        booksql = mysql.fetchall()
+    return render_template('view_book.html',sql1s=booksql)
+
 
 if __name__ == '__main__':
     app.run()
