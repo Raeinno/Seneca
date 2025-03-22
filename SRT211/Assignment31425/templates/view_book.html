@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<head>
+    <title>View Books</title>
+</head>
+
+<body>
+    <h1>Current Books</h1>
+    <table> 
+        <thead> 
+            <tr> 
+                <th>ID</th> 
+                <th>Name</th> 
+                <th>Email</th> 
+                <th>Message</th> 
+            </tr> 
+        </thead> 
+        <tbody> 
+            {% for Books in books1 %} 
+            <tr> 
+                <td>{{ Books[0] }}</td> 
+                <td>{{ Books[1] }}</td> 
+                <td>{{ Books[2] }}</td> 
+                <td>{{ Books[3] }}</td> 
+            </tr> 
+            {% endfor %} 
+        </tbody> 
+    </table> 
+</body>
+</html>
